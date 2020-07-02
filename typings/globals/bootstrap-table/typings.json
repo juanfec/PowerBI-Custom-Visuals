@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/a1fbe3bc3f6d1256bd8635cc84c93cf8796c09ec/bootstrap-table/index.d.ts",
+    "raw": "registry:dt/bootstrap-table#1.11.0+20161104204819",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/a1fbe3bc3f6d1256bd8635cc84c93cf8796c09ec/bootstrap-table/index.d.ts"
+  }
+}

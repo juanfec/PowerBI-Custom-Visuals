@@ -35,6 +35,10 @@ import EnumerateVisualObjectInstancesOptions = powerbi.EnumerateVisualObjectInst
 import VisualObjectInstance = powerbi.VisualObjectInstance;
 import DataView = powerbi.DataView;
 import VisualObjectInstanceEnumerationObject = powerbi.VisualObjectInstanceEnumerationObject;
+import {} from 'jquery';
+
+
+
 
 import { VisualSettings } from "./settings";
 
@@ -49,11 +53,16 @@ export class Visual implements IVisual {
     private settings: VisualSettings;
     private apiUrl: String;
     private listOfData;
+    private $table: JQuery;
+    
+
+    
 
     constructor(options: VisualConstructorOptions) {
         //console.log('Visual constructor', options);
         this.target = options.element;
         if (document) {
+            
             //new_p.appendChild(document.createTextNode("Update count:"));
             //const new_em: HTMLElement = document.createElement("em");
             //let row = table.insertRow(0);
@@ -68,6 +77,17 @@ export class Visual implements IVisual {
                 this.listOfData = data;
                 this.drawTable(this.target);
             });
+            $(document).ready(function(){
+                $("p").click(function(){
+                  $(this).hide();
+                });
+                console.log("jquery");
+            });
+            $(options.element)
+                //Display jquery version in visual
+                .append(`<p>JQuery Version: </p>`)
+                //Display lodash version in visual
+                .append(`<p>Lodash Version: <em>test</em></p>`)
         }
     }
 
